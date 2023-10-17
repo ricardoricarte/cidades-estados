@@ -45,6 +45,4 @@ Regras de negócios:
   Por exemplo: 
   com dois select cidade e estado onde ao selecionar o estado ele carregue as cidades daquele estado? 
 
-  ![image](https://github.com/ricardoricarte/cidades-estados/assets/56279938/c9852cab-7469-4282-8966-9a12ca6694cd)
-
 <br>
