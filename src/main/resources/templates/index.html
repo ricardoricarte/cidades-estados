@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Selecionar Cidade por Estado</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f5f5f5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      h1 {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px;
+        width: 100%;
+      }
+
+      form {
+        margin: 20px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        max-width: 400px;
+        width: 100%;
+      }
+
+      label {
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+      }
+
+      select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Selecionar Cidade por Estado</h1>
+
+    <form>
+      <label for="estadoSelect">Selecione o Estado:</label>
+      <select id="estadoSelect" th:field="*{estado}">
+        <option
+          th:each="estado : ${estados}"
+          th:value="${estado.id}"
+          th:text="${estado.nome}"
+        ></option>
+      </select>
+
+      <label for="cidadeSelect">Selecione a Cidade:</label>
+      <select id="cidadeSelect" th:field="*{cidade}">
+        <option
+          th:each="cidade : ${cidades}"
+          th:value="${cidade.id}"
+          th:text="${cidade.nome}"
+        ></option>
+      </select>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#estadoSelect").change(function () {
+          var estadoId = $(this).val();
+          $.get("/cidades/" + estadoId, function (data) {
+            var cidadeSelect = $("#cidadeSelect");
+            cidadeSelect.empty();
+            $.each(data, function (index, cidade) {
+              cidadeSelect.append(new Option(cidade.nome, cidade.id));
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
