@@ -36,14 +36,14 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - Clone o repositório
 - Abra em qualquer IDE Java
 - Execute o projeto Spring Boot
-- localhost:8080
+- http://localhost:8080
 
 
 Regras de negócios:
 
-  criar um projetinho simples com spring boot e um layout com thymeleaf, 
-  por exemplo, com dois select cidade e estado onde ao selecionar o estado ele carregue as cidades daquele estado? 
-```
+  Criar um projetinho simples com spring boot e um layout com thymeleaf.
+  Por exemplo: 
+  com dois select cidade e estado onde ao selecionar o estado ele carregue as cidades daquele estado? 
 
 ```
 
