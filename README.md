@@ -16,7 +16,7 @@
   </a>
     <a href="https://www.buymeacoffee.com/codeandmusic" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="28" width="174"></a>
 
-<br>
+
 
 ## ✨ Tecnologias
 
@@ -44,7 +44,4 @@ Regras de negócios:
   Criar um projetinho simples com spring boot e um layout com thymeleaf.
   Por exemplo: 
   com dois select cidade e estado onde ao selecionar o estado ele carregue as cidades daquele estado? 
-
-```
-
----
+<br>
