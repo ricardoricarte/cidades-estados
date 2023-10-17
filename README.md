@@ -39,7 +39,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - http://localhost:8080
 
 
-Regras de negócios:
+Regras para o desafio:
 
   Criar um projetinho simples com spring boot e um layout com thymeleaf.
   Por exemplo: 
